@@ -1,0 +1,282 @@
+/*----------------------------
+	RESET: START
+------------------------------*/
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  padding: 2rem;
+  max-width: 1350px;
+  overflow: hidden;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav li {
+  display: inline-block;
+  list-style: none;
+  padding: 1.25rem;
+  color: rgb(124, 123, 123);
+}
+
+.nav__hamburger {
+  display: none;
+}
+
+.header__nav--hover a {
+  color: inherit;
+  transition: 0.2s;
+}
+
+.header__nav--hover a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+
+main {
+  margin-top: 1.56rem;
+  display: grid;
+  grid-template-columns: 25rem 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, 3fr);
+  grid-template-areas: "t1 t1 t2" "t3 t4 t2" "t5 t6 t7";
+  gap: 3.125rem;
+}
+
+.heroContainer {
+  grid-area: t1;
+}
+
+.heroContainer__mobile {
+  display: none;
+}
+
+.hero__heading {
+  grid-area: t3;
+}
+.hero__heading h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hero__paragraph {
+  grid-area: t4;
+  font-size: 0.9rem;
+}
+.hero__paragraph button {
+  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+  border: none;
+}
+.hero__paragraph button a {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+}
+
+.btn-red {
+  margin-top: 3.75rem;
+  background-color: hsl(5deg, 85%, 63%);
+  transition: 0.2s;
+}
+
+.btn-red:hover {
+  cursor: pointer;
+  background-color: hsl(35deg, 77%, 62%);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  grid-area: t2;
+  background-color: hsl(240deg, 100%, 5%);
+  color: white;
+  padding: 1.5rem;
+}
+
+.side__heading {
+  color: hsl(35deg, 77%, 62%);
+  font-size: 2rem;
+}
+
+.sidebar__item {
+  margin-top: 1.56rem;
+}
+.sidebar__item p {
+  margin-top: 0.625rem;
+  color: rgb(124, 123, 123);
+}
+
+.side__item--underline {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 2.8rem;
+}
+
+.product__item {
+  display: flex;
+  align-items: center;
+}
+.product__item img {
+  height: 135px;
+}
+
+.product__item--pc {
+  grid-area: t5;
+}
+
+.product__item--laptop {
+  grid-area: t6;
+}
+
+.product__item--controller {
+  grid-area: t7;
+}
+
+.product__item--text {
+  margin-left: 1.5rem;
+}
+.product__item--text h3 {
+  font-weight: 700;
+}
+.product__item--text p {
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1300px) {
+  body {
+    overflow: scroll;
+    padding: 1.5rem;
+  }
+  main {
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "t1 t1 t1" "t2 t2 t2" "t3 t4 t4" "t5 t6 ." "t7 . .";
+    gap: 1.875rem;
+  }
+}
+@media (max-width: 820px) {
+  body {
+    overflow: scoll;
+    padding: 1rem;
+  }
+  .nav__links {
+    display: none;
+  }
+  .nav__hamburger {
+    display: block;
+    padding-top: 0.75rem;
+    width: 55px;
+  }
+  .heroContainer__mobile {
+    display: block;
+    width: 100%;
+  }
+  .heroContainer__desktop {
+    display: none;
+  }
+  main {
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "t1" "t2" "t3" "t4" "t5" "t6" "t7";
+  }
+}/*# sourceMappingURL=style.css.map */
