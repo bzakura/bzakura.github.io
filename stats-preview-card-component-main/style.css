@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/*----------------------------
+	RESET: START
+------------------------------*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+img {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: gray;
+}
+
+.main {
+  display: flex;
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 100px;
+  background-color: hsl(244deg, 38%, 16%);
+}
+
+.purple-text {
+  color: hsl(277deg, 64%, 61%);
+}
+
+.sub-header {
+  margin-top: 20px;
+}
+
+.data-list {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-list {
+  text-transform: uppercase;
+}
+
+.hero-img {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
+}
+
+.hero-mobile-img {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  body {
+    width: 500px;
+  }
+  main {
+    flex-direction: column-reverse;
+    max-width: 500px;
+  }
+  .column-left {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 80px;
+  }
+  .data-list {
+    flex-direction: column;
+    margin: 20px;
+  }
+  .data-item {
+    padding: 20px;
+  }
+  .hero-desktop-img {
+    display: none;
+  }
+  .hero-mobile-img {
+    display: inline-flex;
+  }
+}/*# sourceMappingURL=style.css.map */
